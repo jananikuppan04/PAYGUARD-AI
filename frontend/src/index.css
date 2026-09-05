@@ -14,13 +14,13 @@
   }
 
   .dark {
-    --bg-canvas: #09090b;
-    --bg-card: #121215;
-    --border-color: #27272a;
-    --text-primary: #f4f4f5;
-    --text-secondary: #a1a1aa;
-    --sidebar-bg: #09090b;
-    --sidebar-border: #27272a;
+    --bg-canvas: #0a0a0a;
+    --bg-card: #111111;
+    --border-color: #1e1e1e;
+    --text-primary: #f5f5f5;
+    --text-secondary: #a0a0a0;
+    --sidebar-bg: #0a0a0a;
+    --sidebar-border: #1e1e1e;
   }
 
   body {

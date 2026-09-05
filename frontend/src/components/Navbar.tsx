@@ -30,14 +30,14 @@ export const Navbar: React.FC<NavbarProps> = ({
   };
 
   return (
-    <header className="h-16 bg-white dark:bg-[#0B0F17] border-b border-zinc-200/90 dark:border-zinc-800 sticky top-0 z-30 px-6 flex items-center justify-between transition-colors">
+    <header className="h-16 bg-[#0a0a0a] border-b border-[#1e1e1e] sticky top-0 z-30 px-6 flex items-center justify-between transition-colors">
       
       {/* Left Title & Breadcrumb */}
       <div className="flex items-center space-x-3">
         <div className="flex items-center space-x-2 text-sm font-medium">
-          <span className="text-zinc-500 dark:text-zinc-400 font-semibold">PayGuard AI</span>
-          <span className="text-zinc-300 dark:text-zinc-600 font-normal">/</span>
-          <span className="font-bold text-zinc-900 dark:text-zinc-100 tracking-tight">
+          <span className="text-zinc-400 font-semibold">PayGuard AI</span>
+          <span className="text-zinc-600 font-normal">/</span>
+          <span className="font-bold text-white tracking-tight">
             {getTabTitle(activeTab)}
           </span>
         </div>
@@ -47,7 +47,7 @@ export const Navbar: React.FC<NavbarProps> = ({
       <div className="flex items-center space-x-3">
         
         {/* Status Indicator Pill */}
-        <div className="flex items-center space-x-2 px-3 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200/80 dark:border-emerald-800/60 text-emerald-700 dark:text-emerald-300 text-xs font-semibold">
+        <div className="flex items-center space-x-2 px-3 py-1.5 rounded-full bg-emerald-950/40 border border-emerald-800/60 text-emerald-300 text-xs font-semibold">
           <span className="h-2 w-2 rounded-full bg-emerald-500"></span>
           <span className="text-[11px] font-medium tracking-tight">Live Engine Active</span>
         </div>
@@ -55,7 +55,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         {/* Theme Toggle Button */}
         <button
           onClick={onToggleTheme}
-          className="h-9 w-9 rounded-lg border border-zinc-200 dark:border-zinc-800 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800 flex items-center justify-center transition-colors"
+          className="h-9 w-9 rounded-lg border border-[#1e1e1e] text-zinc-400 hover:text-white hover:bg-zinc-800 flex items-center justify-center transition-colors"
           title={`Switch to ${theme === 'light' ? 'Dark' : 'Light'} Mode`}
         >
           {theme === 'light' ? <Moon className="h-4 w-4" /> : <Sun className="h-4 w-4" />}
@@ -63,7 +63,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
         {/* Notification Bell */}
         <button
-          className="h-9 w-9 rounded-lg border border-zinc-200 dark:border-zinc-800 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800 flex items-center justify-center transition-colors relative"
+          className="h-9 w-9 rounded-lg border border-[#1e1e1e] text-zinc-400 hover:text-white hover:bg-zinc-800 flex items-center justify-center transition-colors relative"
           title="Notifications"
         >
           <Bell className="h-4 w-4" />
@@ -73,16 +73,16 @@ export const Navbar: React.FC<NavbarProps> = ({
         {/* Ask AI Assistant Trigger */}
         <button
           onClick={onToggleAssistant}
-          className="flex items-center space-x-2 bg-[#f5f3ff] hover:bg-[#ede9fe] dark:bg-purple-950/40 dark:hover:bg-purple-900/50 text-[#6d28d9] dark:text-purple-300 text-xs font-semibold px-3.5 py-2 rounded-lg border border-[#ddd6fe] dark:border-purple-800/60 transition-colors shadow-xs"
+          className="flex items-center space-x-2 bg-white/10 hover:bg-white/15 text-white text-xs font-semibold px-3.5 py-2 rounded-lg border border-white/20 transition-colors shadow-xs"
         >
-          <Bot className="h-4 w-4 text-[#7c3aed] dark:text-purple-400" />
+          <Bot className="h-4 w-4 text-white" />
           <span>Ask AI Assistant</span>
         </button>
 
         {/* Simulate Payment Failure Primary Button */}
         <button
           onClick={onOpenSimulate}
-          className="flex items-center space-x-2 bg-[#09090b] hover:bg-zinc-800 dark:bg-zinc-100 dark:hover:bg-white text-white dark:text-zinc-900 text-xs font-semibold px-4 py-2 rounded-lg shadow-sm transition-all hover:scale-[1.01] active:scale-[0.99]"
+          className="flex items-center space-x-2 bg-white hover:bg-zinc-200 text-black text-xs font-semibold px-4 py-2 rounded-lg shadow-sm transition-all hover:scale-[1.01] active:scale-[0.99]"
         >
           <Play className="h-3 w-3 fill-current" />
           <span>Simulate Payment Failure</span>

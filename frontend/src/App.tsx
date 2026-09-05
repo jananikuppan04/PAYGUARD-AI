@@ -28,7 +28,7 @@ export function App() {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(api.isAuthenticated());
   
   // Theme & Sidebar States
-  const [theme, setTheme] = useState<'light' | 'dark'>('light');
+  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
 
   // Apply dark mode class to html document element
@@ -114,7 +114,7 @@ export function App() {
   const opportunities = payments.filter((p) => p.payment_status === 'RECOVERABLE');
 
   return (
-    <div className={`min-h-screen bg-[#F8FAFC] dark:bg-[#09090b] text-zinc-900 dark:text-zinc-100 flex flex-col font-sans transition-colors`}>
+    <div className={`min-h-screen bg-[#F8FAFC] dark:bg-[#0a0a0a] text-zinc-900 dark:text-zinc-100 flex flex-col font-sans transition-colors`}>
       
       {/* Toast Banner (Matches Screenshot) */}
       {toastMessage && (

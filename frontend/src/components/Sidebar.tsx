@@ -64,16 +64,16 @@ export const Sidebar: React.FC<SidebarProps> = ({
 
   return (
     <aside
-      className={`fixed top-0 left-0 bottom-0 z-40 bg-[#0B0F17] text-white border-r border-zinc-800/90 flex flex-col justify-between transition-all duration-200 ${
+      className={`fixed top-0 left-0 bottom-0 z-40 bg-[#0a0a0a] text-white border-r border-[#1e1e1e] flex flex-col justify-between transition-all duration-200 ${
         isCollapsed ? 'w-16' : 'w-64'
       }`}
     >
       {/* Top Header & Brand */}
       <div className="flex flex-col">
-        <div className="h-16 px-4 flex items-center justify-between border-b border-zinc-800/80">
+        <div className="h-16 px-4 flex items-center justify-between border-b border-[#1e1e1e]">
           <div className="flex items-center space-x-3 overflow-hidden">
-            <div className="h-8 w-8 rounded-lg bg-zinc-800 border border-zinc-700 flex items-center justify-center shrink-0">
-              <Shield className="h-4 w-4 text-white" />
+            <div className="h-8 w-8 rounded-lg bg-white flex items-center justify-center shrink-0">
+              <Shield className="h-4 w-4 text-black" />
             </div>
             {!isCollapsed && (
               <div className="flex flex-col truncate">
@@ -87,7 +87,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
 
           <button
             onClick={onToggleCollapse}
-            className="h-7 w-7 rounded-md bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white hover:bg-zinc-800 flex items-center justify-center transition-colors"
+            className="h-7 w-7 rounded-md bg-[#111111] border border-[#1e1e1e] text-zinc-400 hover:text-white hover:bg-zinc-800 flex items-center justify-center transition-colors"
             title={isCollapsed ? 'Expand Sidebar' : 'Collapse Sidebar'}
           >
             {isCollapsed ? <ChevronRight className="h-4 w-4" /> : <ChevronLeft className="h-4 w-4" />}
@@ -96,7 +96,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
 
         {/* Product Description */}
         {!isCollapsed && (
-          <div className="px-4 py-3 border-b border-zinc-800/50 bg-zinc-950/50">
+          <div className="px-4 py-3 border-b border-[#1e1e1e] bg-[#0a0a0a]">
             <p className="text-[11px] text-zinc-400 leading-relaxed font-medium">
               Explainable Payment Failure Risk Diagnosis & Recovery Agent
             </p>
@@ -124,8 +124,8 @@ export const Sidebar: React.FC<SidebarProps> = ({
                       isCollapsed ? 'justify-center px-0' : 'justify-between px-3'
                     } py-2.5 rounded-lg text-xs font-medium transition-all ${
                       isActive
-                        ? 'bg-[#1a2232] text-white font-semibold border border-zinc-700/80 shadow-sm'
-                        : 'text-zinc-400 hover:text-zinc-200 hover:bg-zinc-900/60'
+                        ? 'bg-white/10 text-white font-semibold border border-white/20 shadow-sm'
+                        : 'text-zinc-400 hover:text-zinc-200 hover:bg-white/5'
                     }`}
                   >
                     <div className="flex items-center space-x-3 truncate">
@@ -147,11 +147,11 @@ export const Sidebar: React.FC<SidebarProps> = ({
       </div>
 
       {/* Bottom Footer Controls */}
-      <div className="p-3 border-t border-zinc-800/80 space-y-2 bg-zinc-950/80">
+      <div className="p-3 border-t border-[#1e1e1e] space-y-2 bg-[#0a0a0a]">
         
         {/* System Status Pill */}
         {!isCollapsed ? (
-          <div className="px-3 py-2 rounded-md bg-zinc-900 border border-zinc-800/80 flex items-center justify-between text-[11px]">
+          <div className="px-3 py-2 rounded-md bg-[#111111] border border-[#1e1e1e] flex items-center justify-between text-[11px]">
             <div className="flex items-center space-x-2">
               <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
               <span className="text-zinc-300 font-medium">Recovery Engine</span>
@@ -190,8 +190,8 @@ export const Sidebar: React.FC<SidebarProps> = ({
 
         {/* User Profile Summary */}
         {!isCollapsed && (
-          <div className="pt-2 border-t border-zinc-800/60 flex items-center space-x-2.5 px-1">
-            <div className="h-7 w-7 rounded-full bg-zinc-800 border border-zinc-700 flex items-center justify-center text-xs font-bold text-white">
+          <div className="pt-2 border-t border-[#1e1e1e] flex items-center space-x-2.5 px-1">
+            <div className="h-7 w-7 rounded-full bg-white flex items-center justify-center text-xs font-bold text-black">
               MA
             </div>
             <div className="flex flex-col truncate text-[11px]">
