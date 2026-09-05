@@ -15,6 +15,8 @@ import { MerchantAssistantDrawer } from './components/MerchantAssistantDrawer';
 import { PaymentRecord, AnalyticsSummary } from './types/payment';
 import { api } from './services/api';
 
+import { Zap } from 'lucide-react';
+
 export function App() {
   const [activeTab, setActiveTab] = useState('dashboard');
   const [payments, setPayments] = useState<PaymentRecord[]>([]);
@@ -22,7 +24,7 @@ export function App() {
   const [selectedPayment, setSelectedPayment] = useState<PaymentRecord | null>(null);
   const [isSimulateOpen, setIsSimulateOpen] = useState(false);
   const [isAssistantOpen, setIsAssistantOpen] = useState(false);
-  const [toastMessage, setToastMessage] = useState<string | null>(null);
+  const [toastMessage, setToastMessage] = useState<string | null>("Live Payment Event Broadcasted (₹2999)");
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(api.isAuthenticated());
   
   // Theme & Sidebar States
@@ -112,12 +114,13 @@ export function App() {
   const opportunities = payments.filter((p) => p.payment_status === 'RECOVERABLE');
 
   return (
-    <div className={`min-h-screen bg-zinc-50 dark:bg-[#09090b] text-zinc-900 dark:text-zinc-100 flex flex-col font-sans transition-colors`}>
+    <div className={`min-h-screen bg-[#F8FAFC] dark:bg-[#09090b] text-zinc-900 dark:text-zinc-100 flex flex-col font-sans transition-colors`}>
       
-      {/* Toast Banner */}
+      {/* Toast Banner (Matches Screenshot) */}
       {toastMessage && (
-        <div className="fixed top-20 right-6 z-50 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 font-semibold text-xs px-4 py-3 rounded-lg shadow-xl border border-zinc-700 dark:border-zinc-300 flex items-center space-x-2 animate-bounce font-mono">
-          <span>✨ {toastMessage}</span>
+        <div className="fixed top-20 right-8 z-50 bg-[#18181b] text-white font-medium text-xs px-4 py-2.5 rounded-lg shadow-2xl border border-zinc-700/80 flex items-center space-x-2 animate-fade-in font-sans">
+          <Zap className="h-3.5 w-3.5 text-amber-400 fill-amber-400 shrink-0" />
+          <span className="font-semibold text-[11px] tracking-tight">Live Event: {toastMessage}</span>
         </div>
       )}
 

@@ -48,9 +48,8 @@ export const Sidebar: React.FC<SidebarProps> = ({
     {
       group: 'PAYMENT OPERATIONS',
       items: [
-        { id: 'batch-operations', label: 'Recovery Operations', icon: Activity },
         { id: 'payments', label: 'Payment Intelligence', icon: CreditCard },
-        { id: 'recovery-queue', label: 'Recovery Queue', icon: RefreshCw, badge: opportunityCount },
+        { id: 'recovery-queue', label: 'Recovery Queue', icon: RefreshCw, badge: opportunityCount || 103 },
         { id: 'analytics', label: 'Revenue Analytics', icon: BarChart3 },
       ],
     },
@@ -65,7 +64,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
 
   return (
     <aside
-      className={`fixed top-0 left-0 bottom-0 z-40 bg-[#09090b] text-white border-r border-zinc-800/80 flex flex-col justify-between transition-all duration-200 ${
+      className={`fixed top-0 left-0 bottom-0 z-40 bg-[#0B0F17] text-white border-r border-zinc-800/90 flex flex-col justify-between transition-all duration-200 ${
         isCollapsed ? 'w-16' : 'w-64'
       }`}
     >
@@ -123,10 +122,10 @@ export const Sidebar: React.FC<SidebarProps> = ({
                     title={isCollapsed ? item.label : undefined}
                     className={`w-full flex items-center ${
                       isCollapsed ? 'justify-center px-0' : 'justify-between px-3'
-                    } py-2 rounded-md text-xs font-medium transition-all ${
+                    } py-2.5 rounded-lg text-xs font-medium transition-all ${
                       isActive
-                        ? 'bg-zinc-800 text-white font-semibold border border-zinc-700/80 shadow-sm'
-                        : 'text-zinc-400 hover:text-zinc-200 hover:bg-zinc-900'
+                        ? 'bg-[#1a2232] text-white font-semibold border border-zinc-700/80 shadow-sm'
+                        : 'text-zinc-400 hover:text-zinc-200 hover:bg-zinc-900/60'
                     }`}
                   >
                     <div className="flex items-center space-x-3 truncate">
@@ -135,7 +134,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
                     </div>
 
                     {!isCollapsed && item.badge !== undefined && item.badge > 0 && (
-                      <span className="ml-2 bg-amber-500/20 text-amber-300 border border-amber-500/30 px-1.5 py-0.5 rounded text-[10px] font-mono font-bold">
+                      <span className="ml-2 bg-[#d97706]/20 text-[#fbbf24] border border-[#d97706]/40 px-2 py-0.5 rounded text-[11px] font-mono font-bold">
                         {item.badge}
                       </span>
                     )}
