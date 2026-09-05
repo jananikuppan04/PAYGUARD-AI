@@ -1,0 +1,13 @@
+{
+    "Accuracy": 0.7667,
+    "Precision": 0.78,
+    "Recall": 0.82,
+    "F1_Score": 0.80,
+    "ROC_AUC": 0.76,
+    "PR_AUC": 0.77,
+    "Balanced_Accuracy": 0.76,
+    "MCC": 0.53,
+    "Prediction_Time": 1.25,
+    "Training_Time": 16.63,
+    "Memory_Usage_MB": 0.051
+}

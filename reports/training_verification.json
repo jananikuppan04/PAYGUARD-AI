@@ -1,0 +1,66 @@
+{
+    "XGBoost": {
+        "model_file_exists": true,
+        "metrics_file_exists": true,
+        "report_file_exists": true,
+        "evaluation_plots_exist": false,
+        "load_successful": false,
+        "load_error": "Can't get attribute 'ThresholdOptimizedModel' on <module 'train.verify_training' from 'C:\\\\Users\\\\Janani\\\\Downloads\\\\Payguard AI\\\\train\\\\verify_training.py'>"
+    },
+    "LightGBM": {
+        "model_file_exists": true,
+        "metrics_file_exists": true,
+        "report_file_exists": true,
+        "evaluation_plots_exist": false,
+        "load_successful": false,
+        "load_error": "Can't get attribute 'ThresholdOptimizedModel' on <module 'train.verify_training' from 'C:\\\\Users\\\\Janani\\\\Downloads\\\\Payguard AI\\\\train\\\\verify_training.py'>"
+    },
+    "Random Forest": {
+        "model_file_exists": true,
+        "metrics_file_exists": true,
+        "report_file_exists": true,
+        "evaluation_plots_exist": false,
+        "load_successful": false,
+        "load_error": "Can't get attribute 'ThresholdOptimizedModel' on <module 'train.verify_training' from 'C:\\\\Users\\\\Janani\\\\Downloads\\\\Payguard AI\\\\train\\\\verify_training.py'>"
+    },
+    "Autoencoder": {
+        "model_file_exists": true,
+        "metrics_file_exists": true,
+        "report_file_exists": true,
+        "evaluation_plots_exist": false,
+        "load_successful": true,
+        "load_error": null
+    },
+    "Isolation Forest": {
+        "model_file_exists": true,
+        "metrics_file_exists": true,
+        "report_file_exists": true,
+        "evaluation_plots_exist": false,
+        "load_successful": true,
+        "load_error": null
+    },
+    "QSVC": {
+        "model_file_exists": true,
+        "metrics_file_exists": true,
+        "report_file_exists": true,
+        "evaluation_plots_exist": false,
+        "load_successful": true,
+        "load_error": null
+    },
+    "VQC": {
+        "model_file_exists": true,
+        "metrics_file_exists": true,
+        "report_file_exists": true,
+        "evaluation_plots_exist": false,
+        "load_successful": true,
+        "load_error": null
+    },
+    "Ensemble": {
+        "model_file_exists": true,
+        "metrics_file_exists": true,
+        "report_file_exists": true,
+        "evaluation_plots_exist": false,
+        "load_successful": false,
+        "load_error": "No module named '__builtin__'"
+    }
+}

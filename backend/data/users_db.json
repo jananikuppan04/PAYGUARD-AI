@@ -1,0 +1,26 @@
+{
+  "merchant@payguard.ai": {
+    "merchant_id": "MERCHANT_DEMO_01",
+    "email": "merchant@payguard.ai",
+    "merchant_name": "Acme Payments Ltd.",
+    "hashed_password": "$2b$12$vN2/ny2eCoc65TqBeVRMM.pIG1N5BYTZ3xXnJyZRr7mHQh03IRllW",
+    "created_at": "2026-09-05T08:10:08.396684",
+    "role": "merchant"
+  },
+  "demo@payguard.ai": {
+    "merchant_id": "MERCHANT_FD3FDEB2",
+    "email": "demo@payguard.ai",
+    "merchant_name": "PayGuard Demo Merchant",
+    "hashed_password": "$2b$12$/IMbwJm42VFAdO2vXnhRxe2tv5DpeAEaaHjPLZDxf6gOH2AG71W8q",
+    "created_at": "2026-09-05T08:55:43.428770",
+    "role": "merchant"
+  },
+  "jananikuppan04@gmail.com": {
+    "merchant_id": "MERCHANT_0FD71D06",
+    "email": "jananikuppan04@gmail.com",
+    "merchant_name": "janani",
+    "hashed_password": "$2b$12$Y8fjDrLMtFizVWxRIPj07OEM.dSmaFOCtlEKatTonBftE7obXHIjC",
+    "created_at": "2026-09-05T16:25:20.797654",
+    "role": "merchant"
+  }
+}
